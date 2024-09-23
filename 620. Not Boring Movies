@@ -1,0 +1,8 @@
+620. Not Boring Movies
+
+#Solution
+
+SELECT *
+FROM cinema
+WHERE id MOD 2 <> 0 AND description <> "boring"
+ORDER BY rating DESC
