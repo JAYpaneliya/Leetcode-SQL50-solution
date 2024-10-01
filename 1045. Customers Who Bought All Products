@@ -1,0 +1,10 @@
+1045. Customers Who Bought All Products
+
+#Solution
+
+SELECT customer_id
+FROM Customer
+GROUP BY 1
+HAVING COUNT(DISTINCT product_key) = (
+    SELECT COUNT(*) FROM Product
+  );
